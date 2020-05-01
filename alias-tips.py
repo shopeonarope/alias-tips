@@ -66,7 +66,7 @@ def expand_input(input, aliases):
 
 
 def find_alias(aliases, input):
-    aliases.sort(key=lambda x: len(x[1]), reverse=True)
+    aliases.sort(key=lambda x: (len(x[1]), -len(x[0])), reverse=True)
 
     res_prev, res = None, input
 
